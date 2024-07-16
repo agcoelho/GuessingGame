@@ -1,14 +1,20 @@
+import random
+
 print('###############################')
 print('Wellcome to the guessing game!')
 print('###############################')
 guess = 0
-secret_number = 42
-above = guess > secret_number
-under = guess < secret_number
-attempts = 5
+secret_number = random.randrange(1,100)
+
+attempts = int(input('How many attempts do you wish to have?\n'))
 while attempts > 0 and guess != secret_number:
+    print(secret_number)
+    
     print('attempts left:', attempts)
     guess = int(input('Type your guess:\n'))
+
+    above = guess > secret_number
+    under = guess < secret_number
 
     print('\nYou guessed:', guess,'\n')
 
@@ -29,4 +35,4 @@ while attempts > 0 and guess != secret_number:
                 print('Pls try again')
             else:
                 print('you loose')
-            
+print('the secret number was {}'.format(secret_number))
