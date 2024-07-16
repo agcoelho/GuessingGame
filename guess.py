@@ -8,7 +8,7 @@ secret_number = random.randrange(1,100)
 
 attempts = int(input('How many attempts do you wish to have?\n'))
 while attempts > 0 and guess != secret_number:
-    print(secret_number)
+    # print(secret_number)
     
     print('attempts left:', attempts)
     guess = int(input('Type your guess:\n'))
@@ -19,7 +19,7 @@ while attempts > 0 and guess != secret_number:
     print('\nYou guessed:', guess,'\n')
 
     if secret_number == guess:
-        print('You won. Congratulations\n')
+        print('You won!! Congratulations!!\n')
     else:
         if above:
             print('Your guess is above the right number.\n')
