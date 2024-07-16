@@ -11,5 +11,9 @@ print('\nyou guessed:', guess,'\n')
 if secret_number != guess:
     print('\nyou loose.\ngood luck next time.\n')
 else:
-    
-    print('\nyou won\ncongratulations!!!\n')
+    if guess > secret_number:
+        print('your guess is above the right number')
+
+    if guess < secret_number:
+        print('your guess is under the right number')
+        
